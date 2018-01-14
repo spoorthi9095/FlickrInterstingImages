@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -68,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     LinearLayout linerForSearch;
     SearchView searchProject;
 
+    Button retryBtn;
+
     Toolbar mTopToolbar;
 
     ArrayList<ImageData> itemDataModelList = new ArrayList<ImageData>();
@@ -90,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         initViews();
         checkForInternet();
+        initListers();
 
     }
 
@@ -113,6 +117,19 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         container=(RelativeLayout)findViewById(R.id.container);
 
+        retryBtn=(Button)findViewById(R.id.retryBtn);
+
+    }
+
+    //Listner to button
+    private void initListers()
+    {
+        retryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkForInternet();
+            }
+        });
     }
 
     //Checking for connectivity,depending on result show the views
@@ -226,13 +243,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     {
         if (totalItems>5)
         {
-//            currentPage=1;
-//            int i = showedItems;
-//            int limit = i+5;
-//            for(i=showedItems;i<limit;i++)
-//            {
-//                itemDataModelList.add(apiResult.get(i));
-//            }
             currentPage=1;
             for(int i=0;i<5;i++)
             {
