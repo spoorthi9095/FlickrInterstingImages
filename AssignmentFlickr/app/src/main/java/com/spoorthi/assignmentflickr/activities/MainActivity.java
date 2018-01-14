@@ -293,16 +293,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                         progressView.setVisibility(View.VISIBLE);
                         showpages(currentPage);
                     }
-//                    else {
-//                        int page_no = Integer.parseInt(FlickrPage)+1;
-//                        FlickrPage = String.valueOf(page_no);
-//                        if(page_no<6)
-//                        {
-//                            checkForInternet();
-//                        }
-//
-//                    }
-
                 }
             }
         });
