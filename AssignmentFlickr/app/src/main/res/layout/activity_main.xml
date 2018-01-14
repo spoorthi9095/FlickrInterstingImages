@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.spoorthi.assignmentflickr.activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:id="@+id/linerForSearch" >
+
+        <android.support.v7.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/searchProduce">
+
+        </android.support.v7.widget.SearchView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/linerForSearch"
+        android:id="@+id/container"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_height="match_parent"
+            android:elevation="5dp"
+            android:clickable="true"
+            android:background="@color/alphaWhite"
+            android:visibility="gone"
+            android:id="@+id/progressView">
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:tint="@color/blue"
+                android:padding="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/projectLIst"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/errorLayout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/noIntImg"
+            android:src="@drawable/no_internet"/>
+
+        <Button
+            android:id="@+id/retryBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/noIntImg"
+            android:text="@string/btn_retry"
+            android:textColor="@color/colorPrimary"/>
+    </RelativeLayout>
+
+</RelativeLayout>

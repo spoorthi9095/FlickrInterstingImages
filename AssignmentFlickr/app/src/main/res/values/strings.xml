@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AssignmentFlickr</string>
+
+    <string name="loading_txt">Please wait. Loading...</string>
+
+    <!-- Button Texts-->
+    <string name="btn_retry">Retry</string>
+
+    <string name="no_results">No results found.</string>
+
+    <string name="serach_for_produce">Search here for projects</string>
+
+</resources>
